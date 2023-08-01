@@ -29,10 +29,15 @@
 
 .social__link {
   fill: #ffffff;
-  width: 12px;
-  height: 6.94px;
   display: flex;
   justify-content: center;
+  height: 13.89px;
+  width: 13.89px;
+
+  @include vp-767 {
+    height: 6.94px;
+    width: 12px;
+  }
 }
 
 .social__item {
