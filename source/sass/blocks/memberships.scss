@@ -132,7 +132,7 @@
   letter-spacing: 0;
   text-align: center;
   position: relative;
-  color: rgba(16, 38, 84, 0.2);
+  color: rgba(16, 38, 84, 0.5);
   background-color: transparent;
   border: none;
   text-transform: none;
@@ -156,12 +156,14 @@
     min-height: 55px;
   }
 
+  &:hover,
+  &:focus,
   &:active {
     color: $color-default-black;
   }
 
   &:disabled {
-    color: rgba(16, 38, 84, 0.1);
+    color: rgba(16, 38, 84, 0.3);
   }
 }
 

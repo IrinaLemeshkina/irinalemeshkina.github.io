@@ -7,7 +7,9 @@
 <stop stop-color="#003D85"/>
 <stop offset="0.885417" stop-color="#B80027"/>
 </linearGradient>
-</defs><symbol id="arrow-along" viewBox="0 0 18 34"><g fill="none">
+</defs><symbol id="arrow-along-hover" viewBox="0 0 18 34"><g fill="none">
+<path d="M1 1L17 17L1 33" stroke="#AFAFAF"/>
+</g></symbol><symbol id="arrow-along" viewBox="0 0 18 34"><g fill="none">
 <path d="M1 1L17 17L1 33" stroke="#AFAFAF"/>
 </g></symbol><symbol id="arrow-back-active" viewBox="0 0 58 58"><g fill="none">
 <circle cx="29" cy="29" r="28" fill="#102654" stroke="#102654"/>
