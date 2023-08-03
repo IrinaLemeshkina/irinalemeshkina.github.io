@@ -2897,6 +2897,7 @@ button,
 @media (max-width: 767px) {
   .gim__media {
     padding: 0;
+    margin: 0;
   }
 }
 
@@ -2913,7 +2914,7 @@ button,
 @media (max-width: 767px) {
   .gim__photo {
     width: 320px;
-    margin: 0;
+    margin: 0 auto;
   }
 }
 
@@ -3000,7 +3001,7 @@ button,
 }
 @media (max-width: 767px) {
   .gym__play-btn {
-    left: 39%;
+    left: 40%;
   }
 }
 
@@ -3932,14 +3933,8 @@ button,
   color: #ffffff;
 }
 .trainers__swiper-button--back:hover, .trainers__swiper-button--back:focus {
-  background-image: url("../img/sprite/arrow-back.svg");
-  background-size: 30px 30px;
-  outline: none;
-  background-color: #ffffff;
-  border-radius: 50%;
-  color: #102654;
-  fill: currentColor;
-  border: 1px solid #102654;
+  background-image: url("../img/sprite/arrow-back-hover.svg");
+  background-size: 54px 54px;
 }
 .trainers__swiper-button--along {
   right: 27px;
@@ -3958,13 +3953,13 @@ button,
   color: #ffffff;
 }
 .trainers__swiper-button--along:hover, .trainers__swiper-button--along:focus {
-  background-image: url("../img/sprite/arrow-along.svg");
+  background-image: url("../img/sprite/arrow-along-hover.svg");
   background-size: 30px 30px;
   outline: none;
   background-color: #ffffff;
   border-radius: 50%;
   color: #102654;
-  fill: currentColor;
+  fill: #102654;
   border: 1px solid #102654;
 }
 @media (max-width: 1199px) {
@@ -5154,16 +5149,16 @@ button,
 }
 
 .reviews__swiper {
-  width: 560px;
+  max-width: 560px;
 }
 @media (max-width: 1199px) {
   .reviews__swiper {
-    width: 566px;
+    max-width: 566px;
   }
 }
 @media (max-width: 767px) {
   .reviews__swiper {
-    width: 226px;
+    min-width: 200px;
   }
 }
 
@@ -5263,7 +5258,7 @@ button,
   fill: #afafaf;
 }
 .reviews__swiper-button--along:hover, .reviews__swiper-button--along:focus {
-  background-image: url("../img/sprite/arrow-along.svg");
+  background-image: url("../img/sprite/arrow-along-hover.svg");
   background-size: 30px 30px;
   outline: none;
   background-color: #ffffff;
