@@ -1225,6 +1225,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -2124,7 +2125,6 @@ button,
   background-color: rgba(255, 255, 255, 0);
   z-index: 2;
   display: block;
-  position: absolute;
   width: 100%;
   margin: 0 auto;
 }
@@ -2169,6 +2169,8 @@ button,
   width: 154px;
   height: 32px;
   letter-spacing: 0.7px;
+  display: inline-block;
+  white-space: nowrap;
 }
 @media (max-width: 1199px) {
   .header__phone {
@@ -2241,6 +2243,11 @@ button,
 }
 .header__logo svg:disabled {
   fill: rgba(255, 255, 255, 0.5);
+}
+
+.header__link {
+  width: 190px;
+  text-align: right;
 }
 
 .footer {
@@ -2340,6 +2347,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
   padding: 28px 0 0 0;
 }
@@ -2427,6 +2436,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 40px;
 }
 @media (max-width: 1199px) {
@@ -2501,7 +2512,7 @@ button,
   }
 }
 
-.hero {
+.background {
   background: conic-gradient(from 150.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 }
 
@@ -2538,8 +2549,8 @@ button,
   display: grid;
   -ms-grid-columns: 110px 250px;
   grid-template-columns: 110px 250px;
-  -ms-grid-rows: 70px 270px 75px;
-  grid-template-rows: 70px 270px 75px;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
   margin: 0;
   padding: 102px 0 0;
   text-align: left;
@@ -2549,8 +2560,8 @@ button,
   .hero__description {
     -ms-grid-columns: 110px 190px;
     grid-template-columns: 110px 190px;
-    -ms-grid-rows: 70px 235px 75px;
-    grid-template-rows: 70px 235px 75px;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
     padding: 0;
     gap: 10px 30px;
   }
@@ -2561,8 +2572,8 @@ button,
     padding: 0;
     -ms-grid-columns: 105px 185px;
     grid-template-columns: 105px 185px;
-    -ms-grid-rows: 70px 220px 55px;
-    grid-template-rows: 70px 220px 55px;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
     gap: 0 13px;
   }
 }
@@ -3482,11 +3493,9 @@ button,
 }
 @media (max-width: 767px) {
   .news {
-    margin: 70px 15px 40px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    margin: 70px auto 40px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -3501,10 +3510,12 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 498px;
 }
 @media (max-width: 1199px) {
   .news__wrapper {
     padding: 15px 10px;
+    max-width: 290px;
   }
 }
 
@@ -3529,26 +3540,11 @@ button,
   }
 }
 
-.news__media {
-  background-image: -webkit-image-set(url("../img/news/crossfit.jpg") 1x, url("../img/news/crossfit@2x.jpg") 2x);
-  background-image: image-set("../img/news/crossfit.jpg" 1x, "../img/news/crossfit@2x.jpg" 2x);
+.news img {
   background-color: #103aae;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 660px;
-  height: 500px;
-}
-@media (max-width: 1199px) {
-  .news__media {
-    width: 386px;
-    height: 292px;
-  }
-}
-@media (max-width: 767px) {
-  .news__media {
-    width: 100%;
-  }
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 100%;
 }
 
 .news__description {
@@ -3560,6 +3556,7 @@ button,
   color: #ffffff;
   letter-spacing: 0;
   margin: 5px 20px 45px;
+  padding-right: 50px;
 }
 @media (max-width: 1199px) {
   .news__description {
@@ -3567,6 +3564,7 @@ button,
     line-height: 18px;
     margin: 0 35px 30px 20px;
     text-align: center;
+    padding: 0;
   }
 }
 
@@ -3883,7 +3881,7 @@ button,
   margin: 0 auto;
   cursor: -webkit-grab;
   cursor: grab;
-  width: 260px;
+  max-width: 600px;
 }
 @media (max-width: 767px) {
   .trainers__card {
@@ -3892,17 +3890,9 @@ button,
 }
 
 .trainers__card img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -o-object-fit: cover;
      object-fit: cover;
   background-color: #ffffff;
-}
-@media (max-width: 767px) {
-  .trainers__card img {
-    height: 274px;
-  }
 }
 
 .trainers__swiper-button {
@@ -4015,6 +4005,7 @@ button,
   background-color: rgba(16, 38, 84, 0.89);
   font-size: 14px;
   line-height: 22px;
+  overflow: scroll;
 }
 @media (max-width: 1199px) {
   .trainers__info {
@@ -4096,6 +4087,7 @@ button,
           flex-direction: column;
   list-style-type: none;
   row-gap: 12px;
+  scroll-behavior: auto;
 }
 @media (max-width: 767px) {
   .trainers__about {
@@ -4421,6 +4413,7 @@ button,
 @media (max-width: 767px) {
   .stocks__wrapper {
     padding: 0 15px 50px;
+    width: 290px;
   }
 }
 
@@ -4496,7 +4489,6 @@ button,
 }
 @media (max-width: 767px) {
   .stocks__item--main {
-    margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4736,23 +4728,11 @@ button,
   }
 }
 
-.stocks__photo {
-  background-image: -webkit-image-set(url("../img/stocks/stocks-girl-in-blue.jpg") 1x, url("../img/stocks/stocks-girl-in-blue@2x.jpg") 2x);
-  background-image: image-set("../img/stocks/stocks-girl-in-blue.jpg" 1x, "../img/stocks/stocks-girl-in-blue@2x.jpg" 2x);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media (max-width: 1199px) {
-  .stocks__photo {
-    background-image: -webkit-image-set(url("../img/stocks/stocks-girl-in-blue-tablet.jpg") 1x, url("../img/stocks/stocks-girl-in-blue-tablet@2x.jpg") 2x);
-    background-image: image-set("../img/stocks/stocks-girl-in-blue-tablet.jpg" 1x, "../img/stocks/stocks-girl-in-blue-tablet@2x.jpg" 2x);
-    height: 462px;
-  }
-}
-@media (max-width: 767px) {
-  .stocks__photo {
-    height: 299px;
-  }
+.stocks img {
+  background-color: #003eb7;
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 100%;
 }
 
 .faq {
@@ -5159,6 +5139,7 @@ button,
 @media (max-width: 767px) {
   .reviews__swiper {
     min-width: 200px;
+    margin: 0 30px;
   }
 }
 
@@ -5220,7 +5201,7 @@ button,
 
 .reviews__swiper-button {
   position: absolute;
-  top: 58.5%;
+  top: calc(75% - 76px);
   width: 56px;
   height: 56px;
   background-repeat: no-repeat;
@@ -5276,7 +5257,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__swiper-button {
-    top: 57%;
+    top: calc(75% - 76px);
   }
   .reviews__swiper-button--back:hover, .reviews__swiper-button--back:focus {
     background-image: url("../img/sprite/arrow-back.svg");
@@ -5291,7 +5272,7 @@ button,
 }
 @media (max-width: 767px) {
   .reviews__swiper-button {
-    top: 51%;
+    top: calc(75% - 76px);
     width: 20px;
     height: 20px;
     background-size: 10px 19px;
@@ -5737,10 +5718,17 @@ button,
   padding-left: 4px;
   width: 190px;
 }
+.contacts__item--tell {
+  display: inline;
+  white-space: nowrap;
+}
 @media (max-width: 1199px) {
   .contacts__item {
     padding: 0;
     width: 225px;
+  }
+  .contacts__item--tell {
+    padding-right: 100px;
   }
 }
 @media (max-width: 767px) {
@@ -5792,6 +5780,9 @@ button,
 
 .contacts__item > a {
   margin: 0;
+  display: block;
+  white-space: nowrap;
+  width: 190px;
   font-size: 14px;
   line-height: 22px;
 }

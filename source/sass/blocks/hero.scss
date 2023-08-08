@@ -1,4 +1,4 @@
-.hero {
+.background {
   background: conic-gradient(from 150.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 }
 
@@ -28,7 +28,7 @@
 .hero__description {
   display: grid;
   grid-template-columns: 110px 250px;
-  grid-template-rows: 70px 270px 75px;
+  grid-template-rows: auto;
   margin: 0;
   padding: 102px 0 0;
   text-align: left;
@@ -36,7 +36,7 @@
 
   @include vp-1199 {
     grid-template-columns: 110px 190px;
-    grid-template-rows: 70px 235px 75px;
+    grid-template-rows: auto;
     padding: 0;
     gap: 10px 30px;
   }
@@ -45,7 +45,7 @@
     margin: 0;
     padding: 0;
     grid-template-columns: 105px 185px;
-    grid-template-rows: 70px 220px 55px;
+    grid-template-rows: auto;
     gap: 0 13px;
   }
 }

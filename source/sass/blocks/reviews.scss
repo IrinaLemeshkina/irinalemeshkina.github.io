@@ -43,6 +43,7 @@
 
   @include vp-767 {
     min-width: 200px;
+    margin: 0 30px;
   }
 }
 
@@ -94,7 +95,7 @@
 
 .reviews__swiper-button {
   position: absolute;
-  top: 58.5%;
+  top: calc((100% + 50%) / 2 - 76px);
   width: 56px;
   height: 56px;
   background-repeat: no-repeat;
@@ -153,7 +154,7 @@
   }
 
   @include vp-1199 {
-    top: 57%;
+    top: calc((100% + 50%) / 2 - 76px);
 
     &--back {
       &:hover,
@@ -174,7 +175,7 @@
   }
 
   @include vp-767 {
-    top: 51%;
+    top: calc((100% + 50%) / 2 - 76px);
     width: 20px;
     height: 20px;
     background-size: 10px 19px;

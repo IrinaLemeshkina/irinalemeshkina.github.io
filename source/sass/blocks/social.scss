@@ -14,6 +14,7 @@
 .social__list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 28px 0 0 0;
 
@@ -36,9 +37,9 @@
 }
 
 .social__link__icon {
-    height: 13.89px;
-    width: 13.89px;
-    margin: 5.55px 0;
+  height: 13.89px;
+  width: 13.89px;
+  margin: 5.55px 0;
 }
 
 .social__item {

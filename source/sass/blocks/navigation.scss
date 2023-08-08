@@ -20,6 +20,7 @@
 .navigation__list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 
   @include vp-1199 {

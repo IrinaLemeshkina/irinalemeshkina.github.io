@@ -91,9 +91,18 @@
   padding-left: 4px;
   width: 190px;
 
+  &--tell {
+    display: inline;
+    white-space: nowrap;
+  }
+
   @include vp-1199 {
     padding: 0;
     width: 225px;
+
+    &--tell {
+      padding-right: 100px;
+    }
   }
 
   @include vp-767 {
@@ -140,7 +149,9 @@
 
 .contacts__item > a {
   margin: 0;
-
+  display: block;
+  white-space: nowrap;
+  width: 190px;
   font-size: 14px;
   line-height: 22px;
 

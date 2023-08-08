@@ -10,6 +10,7 @@
 
   @include vp-767 {
     padding: 0 15px 50px;
+    width: 290px;
   }
 }
 
@@ -64,7 +65,6 @@
   }
 
   @include vp-767 {
-    margin: 0;
     display: flex;
     flex-direction: column;
   }
@@ -284,17 +284,8 @@
   }
 }
 
-.stocks__photo {
-  background-image: image-set("../img/stocks/stocks-girl-in-blue.jpg" 1x, "../img/stocks/stocks-girl-in-blue@2x.jpg" 2x);
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @include vp-1199 {
-    background-image: image-set("../img/stocks/stocks-girl-in-blue-tablet.jpg" 1x, "../img/stocks/stocks-girl-in-blue-tablet@2x.jpg" 2x);
-    height: 462px;
-  }
-
-  @include vp-767 {
-    height: 299px;
-  }
+.stocks img {
+  background-color: #003eb7;
+  object-fit: fill;
+  height: 100%;
 }
