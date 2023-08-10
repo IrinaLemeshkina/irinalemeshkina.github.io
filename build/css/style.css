@@ -2121,17 +2121,11 @@ button,
 }
 
 .header {
-  min-height: 80px;
   background-color: rgba(255, 255, 255, 0);
   z-index: 2;
   display: block;
   width: 100%;
   margin: 0 auto;
-}
-@media (max-width: 1199px) {
-  .header {
-    min-height: 60px;
-  }
 }
 
 .header__wrapper {
@@ -2285,7 +2279,7 @@ button,
 @media (max-width: 767px) {
   .footer__wrapper {
     gap: 5px;
-    padding: 45px 16px 35px;
+    padding: 52px 16px 35px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2313,6 +2307,7 @@ button,
   display: block;
   width: 88px;
   height: 32px;
+  margin: -5px 0 0 -2px;
 }
 @media (max-width: 1199px) {
   .footer__logo svg {
@@ -2325,6 +2320,12 @@ button,
     width: 68px;
     height: 15px;
   }
+}
+
+.footer__link__icon {
+  height: 13.89px;
+  width: 13.89px;
+  margin: 5.55px 0;
 }
 
 .social {
@@ -2374,12 +2375,6 @@ button,
           justify-content: center;
   height: 25px;
   width: 25px;
-}
-
-.social__link__icon {
-  height: 13.89px;
-  width: 13.89px;
-  margin: 5.55px 0;
 }
 
 .social__item {
@@ -2520,7 +2515,7 @@ button,
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
-  padding: 40px 300px 45px 120px;
+  padding: 0 300px 0 120px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 500px;
@@ -2531,14 +2526,14 @@ button,
   .hero__wrapper {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    padding: 61px 40px 85px 35px;
+    padding: 0 40px 85px 35px;
     width: 750px;
     gap: 15px;
   }
 }
 @media (max-width: 767px) {
   .hero__wrapper {
-    padding: 61px 0 85px;
+    padding: 0 0 80px;
     width: 320px;
     gap: 0;
   }
@@ -2549,10 +2544,12 @@ button,
   display: grid;
   -ms-grid-columns: 110px 250px;
   grid-template-columns: 110px 250px;
-  -ms-grid-rows: auto;
-  grid-template-rows: auto;
+  -ms-grid-rows: -webkit-max-content;
+  -ms-grid-rows: max-content;
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
   margin: 0;
-  padding: 102px 0 0;
+  padding: 50px 0 80px;
   text-align: left;
   gap: 10px 20px;
 }
@@ -2560,8 +2557,6 @@ button,
   .hero__description {
     -ms-grid-columns: 110px 190px;
     grid-template-columns: 110px 190px;
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
     padding: 0;
     gap: 10px 30px;
   }
@@ -2572,8 +2567,6 @@ button,
     padding: 0;
     -ms-grid-columns: 105px 185px;
     grid-template-columns: 105px 185px;
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
     gap: 0 13px;
   }
 }
@@ -2583,13 +2576,13 @@ button,
   height: 556px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 10px 0;
+  margin: -10px 0 10px;
 }
 @media (max-width: 1199px) {
   .hero__photo {
     width: 324px;
     height: 390px;
-    margin: 20px 0 0 10px;
+    margin: 0 0 0 10px;
   }
 }
 @media (max-width: 767px) {
@@ -2613,7 +2606,7 @@ button,
   stroke: #ffffff;
   -webkit-text-stroke-width: 2px;
   margin: 0;
-  padding: 18px 0 5px;
+  padding: 0 0 35px;
 }
 @media (max-width: 1199px) {
   .hero__title {
@@ -2621,13 +2614,14 @@ button,
     line-height: 86px;
     text-transform: none;
     padding: 0;
-    padding-top: 40px;
+    margin: -17px 0 25px;
   }
 }
 @media (max-width: 767px) {
   .hero__title {
     font-weight: 600;
     padding-top: 25px;
+    margin-bottom: 20px;
   }
 }
 
@@ -2643,7 +2637,7 @@ button,
   letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
-  margin: 28px 0 0 67px;
+  margin: 55px 0 10px 67px;
   padding: 0;
   stroke: #ffffff;
   -webkit-text-stroke-width: 1px;
@@ -2657,7 +2651,8 @@ button,
     stroke: none;
     -webkit-text-stroke-width: 0;
     text-align: center;
-    padding: 45px 0 0 50px;
+    padding: 5px 0 0 50px;
+    margin-top: 50px;
   }
 }
 @media (max-width: 767px) {
@@ -2666,7 +2661,7 @@ button,
     font-size: 24px;
     line-height: 34px;
     letter-spacing: 0.03em;
-    padding: 20px 0 0 70px;
+    padding: 0 0 0 70px;
   }
 }
 
@@ -2686,19 +2681,19 @@ button,
   list-style: none;
   text-align: right;
   color: #ffffff;
-  margin: 50px 0 0;
-  padding: 87px 0 85px;
+  margin: 50px 0 10px;
+  padding: 70px 0 0;
   width: 113px;
 }
 @media (max-width: 1199px) {
   .hero__list {
-    padding: 77px 0 55px;
+    padding: 27px 0 5px;
   }
 }
 @media (max-width: 767px) {
   .hero__list {
     padding-top: 40px;
-    margin: 62px 0 0 13px;
+    margin: 42px 0 0 13px;
   }
 }
 
@@ -2759,7 +2754,7 @@ button,
 }
 @media (max-width: 767px) {
   .gim {
-    padding: 60px 0 50px;
+    padding: 55px 0 50px;
   }
 }
 
@@ -2831,7 +2826,7 @@ button,
     font-size: 42px;
     line-height: 50px;
     text-align: center;
-    padding: 25px 0 0 15px;
+    padding: 25px 0 0 0;
   }
 }
 @media (max-width: 767px) {
@@ -2856,7 +2851,7 @@ button,
 @media (max-width: 1199px) {
   .gim__description {
     text-align: center;
-    padding: 0 0 20px 13px;
+    padding: 0 0 25px 13px;
   }
 }
 @media (max-width: 767px) {
@@ -2912,18 +2907,18 @@ button,
   }
 }
 
-.gim__photo {
+.media__photo {
   width: 660px;
   margin: 0 0 0 50px;
 }
 @media (max-width: 1199px) {
-  .gim__photo {
+  .media__photo {
     width: 678px;
     margin: 0 15px;
   }
 }
 @media (max-width: 767px) {
-  .gim__photo {
+  .media__photo {
     width: 320px;
     margin: 0 auto;
   }
@@ -2944,23 +2939,23 @@ button,
   }
 }
 
-.gym__video-wrapper {
+.media__video {
   position: relative;
   margin: -112px 0 0 -12px;
 }
 @media (max-width: 1199px) {
-  .gym__video-wrapper {
-    margin: -80px 0 0 220px;
+  .media__video {
+    margin: -85px 0 0 220px;
   }
 }
 @media (max-width: 767px) {
-  .gym__video-wrapper {
+  .media__video {
     width: 100%;
     margin: 40px 0 0 0;
   }
 }
 
-.gym__video {
+.media__video-wrapper {
   width: 364px;
   height: 228px;
   -o-object-fit: cover;
@@ -2969,19 +2964,19 @@ button,
   background-image: image-set("../img/gim/video.jpg" 1x, "../img/gim/video@2x.jpg" 2x);
 }
 @media (max-width: 1199px) {
-  .gym__video {
+  .media__video-wrapper {
     width: 266px;
     height: 167px;
   }
 }
 @media (max-width: 767px) {
-  .gym__video {
+  .media__video-wrapper {
     width: 100%;
     height: 167px;
   }
 }
 
-.gym__play-btn {
+.media__play-btn {
   position: absolute;
   top: 28%;
   left: 18.3%;
@@ -2992,15 +2987,15 @@ button,
   background: none url("../img/sprite/play.svg") no-repeat;
   background-size: cover;
 }
-.gym__play-btn:hover, .gym__play-btn:focus {
+.media__play-btn:hover, .media__play-btn:focus {
   background-image: url("../img/sprite/play-hover.svg");
 }
-.gym__play-btn:disabled {
+.media__play-btn:disabled {
   background-image: url("../img/sprite/play-disabled.svg");
   pointer-events: none;
 }
 @media (max-width: 1199px) {
-  .gym__play-btn {
+  .media__play-btn {
     width: 73px;
     height: 73px;
     top: 28%;
@@ -3011,7 +3006,7 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .gym__play-btn {
+  .media__play-btn {
     left: 40%;
   }
 }
@@ -3493,7 +3488,7 @@ button,
 }
 @media (max-width: 767px) {
   .news {
-    margin: 70px auto 40px;
+    margin: 75px auto 40px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -3850,7 +3845,7 @@ button,
     font-size: 32px;
     line-height: 38px;
     margin-bottom: 42px;
-    padding: 20px 50px 0 48px;
+    padding: 15px 50px 0 45px;
   }
 }
 
@@ -3959,7 +3954,7 @@ button,
 }
 @media (max-width: 767px) {
   .trainers__swiper-button {
-    top: 58%;
+    top: 50%;
     width: 20px;
     height: 20px;
     background-size: 10px 19px;
@@ -4110,7 +4105,7 @@ button,
 }
 @media (max-width: 767px) {
   .advantages {
-    padding: 15px 0 60px;
+    padding: 20px 0 60px;
   }
 }
 
@@ -4146,7 +4141,7 @@ button,
   .advantages__title {
     font-size: 32px;
     line-height: 38px;
-    padding: 43px 10px 0 33px;
+    padding: 43px 10px 0 0;
   }
 }
 
@@ -4403,7 +4398,7 @@ button,
   margin: 0 auto;
   width: 100%;
   max-width: 1366px;
-  padding: 0 100px 80px;
+  padding: 0 100px 120px;
 }
 @media (max-width: 1199px) {
   .stocks__wrapper {
@@ -4412,7 +4407,7 @@ button,
 }
 @media (max-width: 767px) {
   .stocks__wrapper {
-    padding: 0 15px 50px;
+    padding: 0 0 50px;
     width: 290px;
   }
 }
@@ -4425,7 +4420,7 @@ button,
   letter-spacing: 0.03em;
   text-align: center;
   margin: 0;
-  padding: 145px 0 35px;
+  padding: 140px 0 35px;
 }
 @media (max-width: 1199px) {
   .stocks__title {
@@ -4542,7 +4537,7 @@ button,
 }
 
 .stocks__about {
-  padding: 22px 28px 30px;
+  padding: 22px 28px 3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4702,8 +4697,8 @@ button,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #102654;
-  margin-top: 70px;
-  padding: 7px;
+  margin-top: 65px;
+  padding: 7px 0;
 }
 .stocks__link--other:hover {
   color: #102654;
@@ -4724,7 +4719,7 @@ button,
 @media (max-width: 767px) {
   .stocks__link--other {
     text-align: center;
-    margin: 25px auto 0;
+    margin: 25px auto;
   }
 }
 
@@ -4746,14 +4741,14 @@ button,
   line-height: 65px;
   letter-spacing: 0.03em;
   text-align: left;
-  margin: 0 0 40px;
+  margin: 0 0 36px;
 }
 @media (max-width: 1199px) {
   .faq__title {
     font-size: 42px;
     line-height: 38px;
     text-align: center;
-    margin-bottom: 44px;
+    margin-bottom: 48px;
   }
 }
 @media (max-width: 767px) {
@@ -4772,7 +4767,7 @@ button,
 }
 @media (max-width: 1199px) {
   .faq__wrapper {
-    padding: 104px 45px 100px;
+    padding: 114px 45px 100px;
   }
 }
 @media (max-width: 767px) {
@@ -5118,7 +5113,7 @@ button,
 @media (max-width: 1199px) {
   .reviews__title {
     font-size: 42px;
-    margin: 75px 0 35px;
+    margin: 70px 0 30px;
   }
 }
 @media (max-width: 767px) {
@@ -5201,7 +5196,7 @@ button,
 
 .reviews__swiper-button {
   position: absolute;
-  top: calc(75% - 76px);
+  top: calc(72% - 76px);
   width: 56px;
   height: 56px;
   background-repeat: no-repeat;
@@ -5257,7 +5252,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__swiper-button {
-    top: calc(75% - 76px);
+    top: calc(72% - 76px);
   }
   .reviews__swiper-button--back:hover, .reviews__swiper-button--back:focus {
     background-image: url("../img/sprite/arrow-back.svg");
@@ -5306,7 +5301,7 @@ button,
 }
 
 .reviews__card {
-  padding: 50px 8px 30px 58px;
+  padding: 50px 8px 35px 58px;
   color: #ffffff;
   background-color: rgb(28, 51, 116);
   cursor: -webkit-grab;
@@ -5314,7 +5309,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__card {
-    padding: 50px 64px 30px 65px;
+    padding: 50px 64px 35px 65px;
   }
 }
 @media (max-width: 767px) {
@@ -5327,8 +5322,8 @@ button,
 .reviews__card-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px 350px;
-  grid-template-columns: 100px 350px;
+  -ms-grid-columns: 100px 330px;
+  grid-template-columns: 100px 330px;
   -ms-grid-rows: 20px 1fr;
   grid-template-rows: 20px 1fr;
   position: relative;
@@ -5344,8 +5339,6 @@ button,
     padding-left: 0;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 90px 350px;
-    grid-template-columns: 90px 350px;
     -ms-grid-rows: 20px 1fr;
     grid-template-rows: 20px 1fr;
   }
@@ -5390,7 +5383,7 @@ button,
 }
 
 .form {
-  padding: 15px 103px 66px;
+  padding: 10px 103px 66px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5610,7 +5603,7 @@ button,
 }
 
 .contacts {
-  padding: 57px 60px 60px 108px;
+  padding: 57px 60px 38px 108px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5622,13 +5615,13 @@ button,
 }
 @media (max-width: 1199px) {
   .contacts {
-    padding: 70px 60px 66px 133px;
+    padding: 70px 60px 50px 133px;
     width: 100%;
   }
 }
 @media (max-width: 767px) {
   .contacts {
-    padding: 66px 15px 67px;
+    padding: 66px 15px 45px;
   }
 }
 
@@ -5704,10 +5697,14 @@ button,
 }
 @media (max-width: 767px) {
   .contacts__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 0;
   }
   .contacts__list::after {
     content: none;
@@ -5715,16 +5712,15 @@ button,
 }
 
 .contacts__item {
-  padding-left: 4px;
+  padding: 0 0 20px 4px;
   width: 190px;
 }
 .contacts__item--tell {
-  display: inline;
   white-space: nowrap;
 }
 @media (max-width: 1199px) {
   .contacts__item {
-    padding: 0;
+    padding: 0 0 20px 0;
     width: 225px;
   }
   .contacts__item--tell {
@@ -5732,6 +5728,9 @@ button,
   }
 }
 @media (max-width: 767px) {
+  .contacts__item {
+    padding: 0 0 25px 0;
+  }
   .contacts__item--adress {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;

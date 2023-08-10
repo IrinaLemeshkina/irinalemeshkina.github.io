@@ -2,14 +2,14 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1366px;
-  padding: 0 100px 80px;
+  padding: 0 100px 120px;
 
   @include vp-1199 {
     padding: 0 45px 100px;
   }
 
   @include vp-767 {
-    padding: 0 15px 50px;
+    padding: 0 0 50px;
     width: 290px;
   }
 }
@@ -22,7 +22,7 @@
   letter-spacing: 0.03em;
   text-align: center;
   margin: 0;
-  padding: 145px 0 35px;
+  padding: 140px 0 35px;
 
   @include vp-1199 {
     padding: 75px 0 40px;
@@ -100,7 +100,7 @@
 }
 
 .stocks__about {
-  padding: 22px 28px 30px;
+  padding: 22px 28px 3px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -257,8 +257,8 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-default-black;
-  margin-top: 70px;
-  padding: 7px;
+  margin-top: 65px;
+  padding: 7px 0;
 
   &:hover {
     color: $color-default-black;
@@ -280,7 +280,7 @@
 
   @include vp-767 {
     text-align: center;
-    margin: 25px auto 0;
+    margin: 25px auto;
   }
 }
 
