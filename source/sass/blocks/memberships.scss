@@ -27,10 +27,9 @@
 
   @include vp-1199 {
     background-image: image-set("../img/memberships/membership-equipment-tablet.png" 1x, "../img/memberships/membership-equipment-tablet@2x.png" 2x);
-    bottom: -118px;
-    right: 5px;
+    bottom: -88px;
+    right: 0;
     rotate: 359deg;
-    background-size: cover;
   }
 
   @include vp-767 {
