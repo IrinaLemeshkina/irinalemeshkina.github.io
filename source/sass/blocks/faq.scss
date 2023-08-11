@@ -89,6 +89,7 @@
   &:hover,
   &:focus {
     border-color: $color-default-black;
+    color: $color-default-black;
   }
 
   &:disabled {

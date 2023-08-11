@@ -126,14 +126,15 @@
 
   &:hover,
   &:focus {
-    color: $color-default-black;
+    color: #103aae;
     background-color: $color-default-white;
     outline: none;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.7);
-    border-color: rgba(255, 255, 255, 0.7);
+    color: $color-default-black;
+    background-color: $color-default-white;
+    outline: none;
   }
 
   @include vp-1199 {
