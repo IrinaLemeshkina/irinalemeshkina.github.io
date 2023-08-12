@@ -544,7 +544,7 @@
             </div>
             <div class="stocks__item stocks__item--other">
               <div class="stocks__card">
-                <div class="stocks__about about--left">
+                <div class="stocks__about stocks__about-left">
                   <h3 class="stocks__name">Месяц бесплатно</h3>
                   <p class="stocks__description">Приведи друга, получи абонемент в подарок</p>
                   <a class="stocks__link stocks__link--left" href="#">подробнее</a>
@@ -921,31 +921,33 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
+          <a class="footer__logo">
+            <svg class="footer__link__icon" width="88" height="22" aria-label="Логотип компании.">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
         <nav class="footer__navigation navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="footer__logo">
-                <svg class="footer__link__icon" width="88" height="22" aria-label="Логотип компании.">
-                  <use xlink:href="img/sprite.svg#logo"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="navigation__item">
+          <div class="navigation__list navigation__part">
+          <div class="navigation__part-left">
+            <div class="navigation__item">
               <a class="navigation__link" href="#">Услуги</a>
-            </li>
-            <li class="navigation__item">
+            </div>
+            <div class="navigation__item">
               <a class="navigation__link" href="#">Абонементы</a>
-            </li>
-            <li class="navigation__item">
+            </div>
+          </div>
+            <div class="navigation__part-right">
+            <div class="navigation__item">
               <a class="navigation__link" href="#">Акции</a>
-            </li>
-            <li class="navigation__item">
+            </div>
+            <div class="navigation__item">
               <a class="navigation__link" href="#">Тренеры</a>
-            </li>
-            <li class="navigation__item">
+            </div>
+            <div class="navigation__item">
               <a class="navigation__link" href="#">Расписание</a>
-            </li>
-          </ul>
+            </div>
+          </div>
+          </divs>
         </nav>
         <div class="footer__social social">
           <b class="social__title visually-hidden">Ищите нас в соцсетях</b>

@@ -2269,11 +2269,13 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 70px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 105px 0 30px;
+  padding: 0 105px;
 }
 @media (max-width: 1199px) {
   .footer__wrapper {
@@ -2287,7 +2289,7 @@ button,
 @media (max-width: 767px) {
   .footer__wrapper {
     gap: 5px;
-    padding: 52px 16px 35px;
+    padding: 2px 16px 35px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2315,12 +2317,13 @@ button,
   display: block;
   width: 88px;
   height: 32px;
-  margin: -5px 0 0 -2px;
+  margin: 45px 0 0 0;
 }
 @media (max-width: 1199px) {
   .footer__logo svg {
     width: 82px;
     height: 18px;
+    margin-top: 40px;
   }
 }
 @media (max-width: 767px) {
@@ -2416,8 +2419,12 @@ button,
 }
 
 .navigation {
-  display: block;
-  padding: 33px 0 0 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px 0 0 0;
 }
 @media (max-width: 1199px) {
   .navigation {
@@ -2426,15 +2433,10 @@ button,
 }
 @media (max-width: 767px) {
   .navigation {
+    display: block;
     padding: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 20px;
+    padding-top: 20px;
     max-width: 90px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     top: 32px;
     left: -42px;
   }
@@ -2448,9 +2450,12 @@ button,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 40px;
+  max-width: 500px;
+  padding-left: 0;
 }
 @media (max-width: 1199px) {
   .navigation__list {
+    max-width: 390px;
     margin: 0;
     padding: 20px 0 0 0;
     gap: 30px;
@@ -2466,8 +2471,6 @@ button,
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     max-height: 120px;
-    gap: 21px;
-    margin-bottom: 5px;
   }
 }
 
@@ -2504,20 +2507,46 @@ button,
     line-height: 19px;
     text-align: left;
     min-width: 135px;
+    padding-bottom: 20px;
   }
 }
 
-.navigation__item:first-of-type {
-  padding-right: 235px;
-}
-@media (max-width: 1199px) {
-  .navigation__item:first-of-type {
-    padding-right: 35px;
-  }
+.navigation__part-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
 }
 @media (max-width: 767px) {
-  .navigation__item:first-of-type {
-    padding-right: 60px;
+  .navigation__part-left {
+    display: block;
+  }
+}
+
+.navigation__part-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .navigation__part-right {
+    display: block;
+    margin: -40px 0 0 -5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navigation__item:last-child {
+    padding-bottom: 10px;
   }
 }
 
@@ -4565,12 +4594,12 @@ button,
 }
 
 @media (max-width: 1199px) {
-  .about--left {
+  .stocks__about-left {
     padding: 22px 55px 3px 28px;
   }
 }
 @media (max-width: 767px) {
-  .about--left {
+  .stocks__about-left {
     padding: 22px 30px 3px 30px;
   }
 }
@@ -5434,6 +5463,10 @@ button,
     margin: 0;
     margin-top: 5px;
   }
+}
+
+.reviews__swiper-wrapper {
+  background-color: #1c3374;
 }
 
 .form {
