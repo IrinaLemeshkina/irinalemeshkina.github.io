@@ -2450,14 +2450,16 @@ button,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 40px;
+  min-width: 420px;
   max-width: 500px;
-  padding-left: 0;
+  padding: 18px 0 0 5px;
 }
 @media (max-width: 1199px) {
   .navigation__list {
-    max-width: 390px;
+    max-width: 420px;
+    min-width: 400px;
     margin: 0;
-    padding: 20px 0 0 0;
+    padding: 20px 0 0 15px;
     gap: 30px;
   }
 }
@@ -2519,7 +2521,12 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 30px;
+  gap: 40px;
+}
+@media (max-width: 1199px) {
+  .navigation__part-left {
+    gap: 32px;
+  }
 }
 @media (max-width: 767px) {
   .navigation__part-left {
@@ -2535,7 +2542,12 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 30px;
+  gap: 40px;
+}
+@media (max-width: 1199px) {
+  .navigation__part-right {
+    gap: 32px;
+  }
 }
 @media (max-width: 767px) {
   .navigation__part-right {
@@ -2607,7 +2619,7 @@ button,
 }
 @media (max-width: 767px) {
   .hero__description {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     -ms-grid-columns: 105px 185px;
     grid-template-columns: 105px 185px;
@@ -3362,7 +3374,7 @@ button,
 }
 @media (max-width: 767px) {
   .card:hover, .card:focus {
-    padding: 40px 10px 50px 10px;
+    padding: 40px 30px 50px;
   }
 }
 .card:default {
@@ -3382,7 +3394,7 @@ button,
 }
 @media (max-width: 767px) {
   .card {
-    padding: 40px 10px 50px 10px;
+    padding: 40px 30px 50px;
   }
 }
 
@@ -3498,6 +3510,12 @@ button,
 .card__btn:disabled {
   background-color: #ffffff;
   color: rgba(16, 38, 84, 0.1);
+}
+@media (max-width: 767px) {
+  .card__btn {
+    margin: 0 auto;
+    padding: 22px 40px;
+  }
 }
 
 .news {
@@ -5206,6 +5224,7 @@ button,
 
 .reviews__swiper {
   max-width: 560px;
+  background-color: #1c3374;
 }
 @media (max-width: 1199px) {
   .reviews__swiper {
