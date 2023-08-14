@@ -33,6 +33,9 @@
 <circle cx="21" cy="21" r="20.5" stroke="#102654"/>
 <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
 </g>
+</g></symbol><symbol id="open-hover" viewBox="0 0 42 42"><g fill="none">
+<circle cx="21" cy="21" r="21" fill="#102654"/>
+<path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="white"/>
 </g></symbol><symbol id="open" viewBox="0 0 42 42"><g fill="none">
 <circle cx="21" cy="21" r="20.5" stroke="#102654"/>
 <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
