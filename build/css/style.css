@@ -3479,11 +3479,9 @@ button,
 }
 @media (max-width: 767px) {
   .news {
-    margin: 70px 15px 40px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    margin: 85px auto 40px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -3498,10 +3496,12 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 498px;
 }
 @media (max-width: 1199px) {
   .news__wrapper {
     padding: 15px 10px;
+    max-width: 290px;
   }
 }
 
@@ -3526,24 +3526,11 @@ button,
   }
 }
 
-.news__media {
-  background-image: -webkit-image-set(url("../img/news/crossfit.jpg") 1x, url("../img/news/crossfit@2x.jpg") 2x);
-  background-image: image-set("../img/news/crossfit.jpg" 1x, "../img/news/crossfit@2x.jpg" 2x);
+.news img {
   background-color: #103aae;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 660px;
-}
-@media (max-width: 1199px) {
-  .news__media {
-    width: 386px;
-  }
-}
-@media (max-width: 767px) {
-  .news__media {
-    width: 100%;
-  }
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
 }
 
 .news__description {
@@ -3555,6 +3542,7 @@ button,
   color: #ffffff;
   letter-spacing: 0;
   margin: 5px 20px 45px;
+  padding-right: 50px;
 }
 @media (max-width: 1199px) {
   .news__description {
@@ -3562,6 +3550,7 @@ button,
     line-height: 18px;
     margin: 0 35px 30px 20px;
     text-align: center;
+    padding: 0;
   }
 }
 
@@ -3741,7 +3730,7 @@ button,
     border-width: 2px;
     width: 204px;
     min-height: 39px;
-    padding: 12px 51px;
+    padding: 12px 45px;
     font-size: 10px;
     font-weight: 700;
     line-height: 12px;
@@ -3877,11 +3866,11 @@ button,
   margin: 0 auto;
   cursor: -webkit-grab;
   cursor: grab;
-  width: 260px;
 }
 @media (max-width: 767px) {
   .trainers__card {
     height: 274px;
+    width: auto;
   }
 }
 
@@ -3892,6 +3881,7 @@ button,
   -o-object-fit: cover;
      object-fit: cover;
   background-color: #ffffff;
+  width: 100%;
 }
 
 .trainers__swiper-button {

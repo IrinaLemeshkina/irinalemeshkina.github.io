@@ -212,12 +212,14 @@
 
 .memberships__element {
   display: none;
+  width: 100%;
 }
 
 .memberships__element.is-active {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
+  width: 100%;
 
   @include vp-1199 {
     display: flex;
@@ -238,6 +240,7 @@
   align-items: center;
   background-color: $color-default-white;
   z-index: 2;
+  max-width: 100%;
 
   &:hover {
     padding: 57px 70px;
