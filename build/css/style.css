@@ -2492,6 +2492,10 @@ button,
   color: #ffffff;
   opacity: 40%;
 }
+.navigation__link:active {
+  outline: none;
+  border: none;
+}
 
 .navigation__item {
   font-size: 14px;
@@ -3181,7 +3185,7 @@ button,
 .memberships__controls::after {
   position: absolute;
   content: "";
-  bottom: 22px;
+  bottom: 5px;
   left: 50%;
   width: 344px;
   height: 2px;
@@ -3196,7 +3200,7 @@ button,
     padding-top: 5px;
   }
   .memberships__controls::after {
-    bottom: 30px;
+    bottom: 5px;
   }
 }
 @media (max-width: 767px) {
@@ -3206,7 +3210,7 @@ button,
     padding-top: 0;
   }
   .memberships__controls::after {
-    bottom: 21px;
+    bottom: 5px;
     width: 270px;
   }
 }
@@ -3225,7 +3229,7 @@ button,
   border: none;
   text-transform: none;
   padding: 10px 10px 6px 12px;
-  min-height: 67px;
+  min-height: 47px;
 }
 @media (max-width: 1199px) {
   .memberships__control {
@@ -3235,6 +3239,7 @@ button,
     letter-spacing: 0;
     text-align: center;
     padding: 0;
+    min-height: 42px;
   }
 }
 @media (max-width: 767px) {
@@ -3244,41 +3249,15 @@ button,
     line-height: 24px;
     letter-spacing: 0;
     text-align: left;
-    min-height: 55px;
+    min-height: 47px;
   }
 }
 .memberships__control:hover, .memberships__control:focus, .memberships__control:active {
   color: #102654;
+  border-bottom: #d10a42 2px solid;
 }
 .memberships__control:disabled {
   color: rgba(16, 38, 84, 0.3);
-}
-
-.memberships__control.is-active {
-  color: #102654;
-}
-.memberships__control.is-active::after {
-  position: absolute;
-  content: "";
-  bottom: 17px;
-  width: 68px;
-  height: 2px;
-  background-color: #d10a42;
-  left: 12%;
-}
-@media (max-width: 1199px) {
-  .memberships__control.is-active::after {
-    left: -2px;
-    width: 68px;
-    bottom: 26px;
-  }
-}
-@media (max-width: 767px) {
-  .memberships__control.is-active::after {
-    left: -2px;
-    width: 68px;
-    bottom: 17px;
-  }
 }
 
 .memberships__content {
@@ -3531,8 +3510,9 @@ button,
 }
 @media (max-width: 767px) {
   .card__btn {
-    margin: 0 auto;
+    margin: 0 15px;
     padding: 22px 40px;
+    width: 100%;
   }
 }
 
@@ -3960,7 +3940,7 @@ button,
 
 .trainers__swiper-button {
   position: absolute;
-  top: 52%;
+  top: calc((100% - 56px) / 2 + 36px);
   width: 56px;
   height: 56px;
   background-repeat: no-repeat;
@@ -4021,12 +4001,12 @@ button,
 }
 @media (max-width: 1199px) {
   .trainers__swiper-button {
-    top: 55%;
+    top: calc((100% - 56px) / 2 + 56px);
   }
 }
 @media (max-width: 767px) {
   .trainers__swiper-button {
-    top: 58%;
+    top: calc((100% + 20px) / 2);
     width: 20px;
     height: 20px;
     background-size: 10px 19px;
@@ -4082,7 +4062,7 @@ button,
 @media (max-width: 767px) {
   .trainers__info {
     padding: 20px 10px 28px;
-    width: 226px;
+    width: 100%;
   }
 }
 
@@ -4768,6 +4748,9 @@ button,
   color: #ffffff;
   opacity: 50%;
 }
+.stocks__link:active {
+  outline: none;
+}
 @media (max-width: 767px) {
   .stocks__link {
     text-align: center;
@@ -4796,6 +4779,9 @@ button,
 .stocks__link--other:disabled {
   color: #102654;
   opacity: 30%;
+}
+.stocks__link--other:active {
+  outline: none;
 }
 @media (max-width: 1199px) {
   .stocks__link--other {
@@ -5252,6 +5238,7 @@ button,
   .reviews__swiper {
     min-width: 200px;
     margin: 0 auto;
+    max-width: 78%;
   }
 }
 
@@ -5411,6 +5398,7 @@ button,
   border: none;
   fill: #afafaf;
   background-size: 16px 32px;
+  cursor: auto;
 }
 
 .reviews__swiper-button--along.reviews__button-disabled {
@@ -5419,6 +5407,7 @@ button,
   border: none;
   fill: #afafaf;
   background-size: 16px 32px;
+  cursor: auto;
 }
 
 .reviews__card {
