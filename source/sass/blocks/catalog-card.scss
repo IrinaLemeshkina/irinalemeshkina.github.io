@@ -11,7 +11,7 @@
     border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%) 30;
 
     @include vp-1199 {
-      padding-top: 55px;
+      padding: 55px 90px 55px 90px;
     }
 
     @include vp-767 {
@@ -24,11 +24,20 @@
     border: none;
   }
 
-  &--active {
+  &:active {
     padding: 60px 50px 55px 50px;
     border: 7px solid;
     border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%) 30;
     position: relative;
+
+    @include vp-1199 {
+      padding: 55px 90px 55px 90px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding: 40px 30px 50px;
+    }
   }
 
   @include vp-1199 {
@@ -103,14 +112,15 @@
   z-index: 1;
 
   &::after {
-    content: attr(data-value);
+    content: url("../img/sprite/rouble.svg");
     position: absolute;
     margin: 0;
     width: 38px;
     height: 46px;
     color: $color-default-black;
     font-family: "Rouble", sans-serif;
-    padding: 3px 0 0 18px;
+    padding: 0 0 0 18px;
+    margin-top: -5px;
   }
 
   @include vp-1199 {

@@ -2360,8 +2360,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 10px;
   padding: 28px 0 0 0;
 }
@@ -2379,14 +2377,26 @@ button,
 
 .social__link {
   fill: #ffffff;
+  width: 13.89px;
+  height: 13.89px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 25px;
-  width: 25px;
+}
+
+.social__link--ok {
+  fill: #ffffff;
+  width: 8.83px;
+  height: 15.73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .social__item {
@@ -2411,12 +2421,6 @@ button,
 }
 .social__item:disabled {
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.social__link__icon {
-  width: 13.89px;
-  height: 13.89px;
-  margin: auto;
 }
 
 .navigation {
@@ -2481,8 +2485,12 @@ button,
 
 .navigation__link {
   color: #ffffff;
+  border: none;
+  list-style: none;
+  outline: none;
 }
 .navigation__link:hover {
+  border: none;
   border-bottom: 1px solid #ffffff;
 }
 .navigation__link:focus {
@@ -2491,10 +2499,12 @@ button,
 .navigation__link:disabled {
   color: #ffffff;
   opacity: 40%;
+  border: none;
 }
 .navigation__link:active {
   outline: none;
   border: none;
+  list-style: none;
 }
 
 .navigation__item {
@@ -2507,6 +2517,7 @@ button,
   margin: 0;
   line-height: 16px;
   text-align: left;
+  outline: none;
 }
 @media (max-width: 767px) {
   .navigation__item {
@@ -2609,7 +2620,7 @@ button,
   grid-template-rows: -webkit-max-content;
   grid-template-rows: max-content;
   margin: 0;
-  padding: 50px 0 80px;
+  padding: 30px 0 80px;
   text-align: left;
   gap: 10px 20px;
 }
@@ -2640,7 +2651,7 @@ button,
   height: 556px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: -10px 0 10px;
+  margin: -30px 0 10px;
 }
 @media (max-width: 1199px) {
   .hero__photo {
@@ -2717,7 +2728,7 @@ button,
     stroke: none;
     -webkit-text-stroke-width: 0;
     text-align: center;
-    padding: 5px 0 0 50px;
+    padding: 15px 0 0 50px;
     margin-top: 50px;
   }
 }
@@ -3151,7 +3162,7 @@ button,
 @media (max-width: 1199px) {
   .memberships__title {
     margin: 0;
-    padding: 35px 12px 15px 12px;
+    padding: 30px 12px 15px 2px;
     font-size: 42px;
     line-height: 38px;
   }
@@ -3275,7 +3286,7 @@ button,
 }
 @media (max-width: 1199px) {
   .memberships__content {
-    margin: 0 148px;
+    margin: 40px 148px 0;
     padding: 0;
   }
 }
@@ -3364,7 +3375,7 @@ button,
 }
 @media (max-width: 1199px) {
   .card:hover, .card:focus {
-    padding-top: 55px;
+    padding: 55px 90px 55px 90px;
   }
 }
 @media (max-width: 767px) {
@@ -3376,12 +3387,23 @@ button,
 .card:default {
   border: none;
 }
-.card--active {
+.card:active {
   padding: 60px 50px 55px 50px;
   border: 7px solid;
   -o-border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%) 30;
      border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%) 30;
   position: relative;
+}
+@media (max-width: 1199px) {
+  .card:active {
+    padding: 55px 90px 55px 90px;
+  }
+}
+@media (max-width: 767px) {
+  .card:active {
+    width: 100%;
+    padding: 40px 30px 50px;
+  }
 }
 @media (max-width: 1199px) {
   .card {
@@ -3460,14 +3482,15 @@ button,
   z-index: 1;
 }
 .card__price::after {
-  content: attr(data-value);
+  content: url("../img/sprite/rouble.svg");
   position: absolute;
   margin: 0;
   width: 38px;
   height: 46px;
   color: #102654;
   font-family: "Rouble", sans-serif;
-  padding: 3px 0 0 18px;
+  padding: 0 0 0 18px;
+  margin-top: -5px;
 }
 @media (max-width: 1199px) {
   .card__price {
@@ -4749,6 +4772,7 @@ button,
   opacity: 50%;
 }
 .stocks__link:active {
+  border: none;
   outline: none;
 }
 @media (max-width: 767px) {
@@ -4781,6 +4805,7 @@ button,
   opacity: 30%;
 }
 .stocks__link--other:active {
+  border: none;
   outline: none;
 }
 @media (max-width: 1199px) {
@@ -4854,7 +4879,7 @@ button,
     font-size: 42px;
     line-height: 38px;
     text-align: center;
-    margin-bottom: 44px;
+    margin-bottom: 48px;
   }
 }
 @media (max-width: 767px) {
@@ -5238,7 +5263,6 @@ button,
   .reviews__swiper {
     min-width: 200px;
     margin: 0 auto;
-    max-width: 78%;
   }
 }
 
