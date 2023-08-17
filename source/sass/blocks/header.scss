@@ -1,16 +1,20 @@
 .header {
+  min-height: 80px;
   background-color: $color-transparent;
   z-index: 2;
   display: block;
   width: 100%;
   margin: 0 auto;
+
+  @include vp-1199 {
+    min-height: 60px;
+  }
 }
 
 .header__wrapper {
   width: 100%;
   max-width: 1366px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
   padding: 30px 105px 0 30px;
@@ -34,8 +38,6 @@
   width: 154px;
   height: 32px;
   letter-spacing: 0.7px;
-  display: inline-block;
-  white-space: nowrap;
 
   @include vp-1199 {
     font-size: 24px;
@@ -52,18 +54,6 @@
     left: 15px;
     top: -15px;
   }
-
-  &:hover {
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  &:focus {
-    border: 1px solid $color-default-white;
-  }
-
-  &:disabled {
-    color: rgba(255, 255, 255, 0.5);
-  }
 }
 
 .header__logo {
@@ -71,7 +61,6 @@
   height: 22px;
   margin: 10px 0 0 70px;
   display: block;
-  cursor: pointer;
 
   @include vp-1199 {
     width: 82px;
@@ -98,21 +87,4 @@
     width: 69px;
     height: 24px;
   }
-
-  &:hover {
-    fill: rgba(255, 255, 255, 0.7);
-  }
-
-  &:focus {
-    border: 1px solid $color-default-white;
-  }
-
-  &:disabled {
-    fill: rgba(255, 255, 255, 0.5);
-  }
-}
-
-.header__link {
-  width: 190px;
-  text-align: right;
 }
