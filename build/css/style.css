@@ -2492,6 +2492,10 @@ button,
   color: #ffffff;
   opacity: 40%;
 }
+.navigation__link:active {
+  outline: none;
+  border: none;
+}
 
 .navigation__item {
   font-size: 14px;
@@ -3196,7 +3200,7 @@ button,
     padding-top: 5px;
   }
   .memberships__controls::after {
-    bottom: 30px;
+    bottom: 5px;
   }
 }
 @media (max-width: 767px) {
@@ -3206,7 +3210,7 @@ button,
     padding-top: 0;
   }
   .memberships__controls::after {
-    bottom: 21px;
+    bottom: 5px;
     width: 270px;
   }
 }
@@ -3235,6 +3239,7 @@ button,
     letter-spacing: 0;
     text-align: center;
     padding: 0;
+    min-height: 42px;
   }
 }
 @media (max-width: 767px) {
@@ -3244,7 +3249,7 @@ button,
     line-height: 24px;
     letter-spacing: 0;
     text-align: left;
-    min-height: 55px;
+    min-height: 47px;
   }
 }
 .memberships__control:hover, .memberships__control:focus, .memberships__control:active {
@@ -3516,8 +3521,9 @@ button,
 }
 @media (max-width: 767px) {
   .card__btn {
-    margin: 0 auto;
+    margin: 0 15px;
     padding: 22px 40px;
+    width: 100%;
   }
 }
 
@@ -3945,7 +3951,7 @@ button,
 
 .trainers__swiper-button {
   position: absolute;
-  top: 52%;
+  top: calc((100% - 56px) / 2 + 36px);
   width: 56px;
   height: 56px;
   background-repeat: no-repeat;
@@ -4006,12 +4012,12 @@ button,
 }
 @media (max-width: 1199px) {
   .trainers__swiper-button {
-    top: 55%;
+    top: calc((100% - 56px) / 2 + 56px);
   }
 }
 @media (max-width: 767px) {
   .trainers__swiper-button {
-    top: 58%;
+    top: calc((100% + 20px) / 2);
     width: 20px;
     height: 20px;
     background-size: 10px 19px;
@@ -4753,6 +4759,9 @@ button,
   color: #ffffff;
   opacity: 50%;
 }
+.stocks__link:active {
+  outline: none;
+}
 @media (max-width: 767px) {
   .stocks__link {
     text-align: center;
@@ -4781,6 +4790,9 @@ button,
 .stocks__link--other:disabled {
   color: #102654;
   opacity: 30%;
+}
+.stocks__link--other:active {
+  outline: none;
 }
 @media (max-width: 1199px) {
   .stocks__link--other {
@@ -5236,6 +5248,7 @@ button,
 @media (max-width: 767px) {
   .reviews__swiper {
     min-width: 200px;
+    max-width: 78%;
     margin: 0 15px;
   }
 }
@@ -5396,6 +5409,7 @@ button,
   border: none;
   fill: #afafaf;
   background-size: 16px 32px;
+  cursor: auto;
 }
 
 .reviews__swiper-button--along.reviews__button-disabled {
@@ -5404,6 +5418,7 @@ button,
   border: none;
   fill: #afafaf;
   background-size: 16px 32px;
+  cursor: auto;
 }
 
 .reviews__card {
