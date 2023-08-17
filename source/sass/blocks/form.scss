@@ -1,5 +1,5 @@
 .form {
-  padding: 10px 103px 66px;
+  padding: 15px 103px 66px;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -73,13 +73,14 @@
   font-size: 14px;
   line-height: 22px;
 
-  &:hover {
+  @include hover {
     border-color: $color-default-white;
   }
 
-  &:focus,
-  &:active {
-    border: $color-default-white 2px solid;
+  @include focus {
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
+    border: none;
 
     &::placeholder {
       color: transparent;
@@ -87,7 +88,6 @@
   }
 
   &:disabled {
-    border-color: rgba(255, 255, 255, 0.7);
     pointer-events: none;
     opacity: 0.3;
   }
@@ -125,16 +125,14 @@
 
 
   &:hover,
-  &:focus {
-    color: #103aae;
+  &:focus-visible {
+    color: $color-default-black;
     background-color: $color-default-white;
     outline: none;
   }
 
   &:active {
     color: $color-default-black;
-    background-color: $color-default-white;
-    outline: none;
   }
 
   @include vp-1199 {

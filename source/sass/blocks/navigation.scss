@@ -70,6 +70,11 @@
     border: none;
     list-style: none;
   }
+
+  &:active {
+    outline: none;
+    border: none;
+  }
 }
 
 .navigation__item {

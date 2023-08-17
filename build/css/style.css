@@ -1490,11 +1490,11 @@ button,
 }
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 }
 .btn.focus-visible:focus {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .modal {
@@ -2128,11 +2128,17 @@ button,
 }
 
 .header {
+  min-height: 80px;
   background-color: rgba(255, 255, 255, 0);
   z-index: 2;
   display: block;
   width: 100%;
   margin: 0 auto;
+}
+@media (max-width: 1199px) {
+  .header {
+    min-height: 60px;
+  }
 }
 
 .header__wrapper {
@@ -2141,8 +2147,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2170,8 +2174,6 @@ button,
   width: 154px;
   height: 32px;
   letter-spacing: 0.7px;
-  display: inline-block;
-  white-space: nowrap;
 }
 @media (max-width: 1199px) {
   .header__phone {
@@ -2191,22 +2193,12 @@ button,
     top: -15px;
   }
 }
-.header__phone:hover {
-  color: rgba(255, 255, 255, 0.7);
-}
-.header__phone:focus {
-  border: 1px solid #ffffff;
-}
-.header__phone:disabled {
-  color: rgba(255, 255, 255, 0.5);
-}
 
 .header__logo {
   width: 122px;
   height: 22px;
   margin: 10px 0 0 70px;
   display: block;
-  cursor: pointer;
 }
 @media (max-width: 1199px) {
   .header__logo {
@@ -2236,20 +2228,6 @@ button,
     width: 69px;
     height: 24px;
   }
-}
-.header__logo svg:hover {
-  fill: rgba(255, 255, 255, 0.7);
-}
-.header__logo svg:focus {
-  border: 1px solid #ffffff;
-}
-.header__logo svg:disabled {
-  fill: rgba(255, 255, 255, 0.5);
-}
-
-.header__link {
-  width: 190px;
-  text-align: right;
 }
 
 .footer {
@@ -2505,6 +2483,10 @@ button,
   outline: none;
   border: none;
   list-style: none;
+}
+.navigation__link:active {
+  outline: none;
+  border: none;
 }
 
 .navigation__item {
@@ -5521,7 +5503,7 @@ button,
 }
 
 .form {
-  padding: 10px 103px 66px;
+  padding: 15px 103px 66px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5618,29 +5600,32 @@ button,
   font-size: 14px;
   line-height: 22px;
 }
-.form input:hover {
-  border-color: #ffffff;
+@media (hover: hover) {
+  .form input:hover:not(.focus-visible) {
+    border-color: #ffffff;
+  }
 }
-.form input:focus, .form input:active {
-  border: #ffffff 2px solid;
+.form input.focus-visible:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+  border: none;
 }
-.form input:focus::-webkit-input-placeholder, .form input:active::-webkit-input-placeholder {
+.form input.focus-visible:focus::-webkit-input-placeholder {
   color: transparent;
 }
-.form input:focus::-moz-placeholder, .form input:active::-moz-placeholder {
+.form input.focus-visible:focus::-moz-placeholder {
   color: transparent;
 }
-.form input:focus:-ms-input-placeholder, .form input:active:-ms-input-placeholder {
+.form input.focus-visible:focus:-ms-input-placeholder {
   color: transparent;
 }
-.form input:focus::-ms-input-placeholder, .form input:active::-ms-input-placeholder {
+.form input.focus-visible:focus::-ms-input-placeholder {
   color: transparent;
 }
-.form input:focus::placeholder, .form input:active::placeholder {
+.form input.focus-visible:focus::placeholder {
   color: transparent;
 }
 .form input:disabled {
-  border-color: rgba(255, 255, 255, 0.7);
   pointer-events: none;
   opacity: 0.3;
 }
@@ -5691,15 +5676,13 @@ button,
   display: block;
   min-height: 52px;
 }
-.form__submit:hover, .form__submit:focus {
-  color: #103aae;
+.form__submit:hover, .form__submit:focus-visible {
+  color: #102654;
   background-color: #ffffff;
   outline: none;
 }
 .form__submit:active {
   color: #102654;
-  background-color: #ffffff;
-  outline: none;
 }
 @media (max-width: 1199px) {
   .form__submit {
